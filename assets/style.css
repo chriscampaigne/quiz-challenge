@@ -93,3 +93,10 @@ h3 {
     color: darkblue;
     background-color: lavender;
 }
+
+.btn:hover{
+    cursor: pointer;
+    box-shadow: .4rem .4rem 0 gray;
+    transition: transform 150ms;
+}
+

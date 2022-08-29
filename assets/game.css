@@ -16,4 +16,36 @@
 
 .choice-text {
     padding: 1.5rem;
+    width: 100%;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: .4rem 1.4rem 0 gray;
+    transition: transform 150ms;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+#hud {
+    /* places it horizontally */
+    display: flex;
+
+    /* adds space for both items along the edges */
+    justify-content: space-between;
+}
+
+.hud-prefix{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text{
+    font-size: 2rem;
 }
