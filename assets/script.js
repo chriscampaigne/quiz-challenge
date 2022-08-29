@@ -9,6 +9,7 @@ var acceptingAnswers = false;
 var score = 0;
 var questionCounter = 0;
 var availableQuestions = [];
+var time = 30;
 
 var questions = [
     {
@@ -64,11 +65,14 @@ function startGame() {
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNewQuestion();
+
+    
 }
 
 function getNewQuestion() {
 
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem("mostRecentScore", score);
         //goes to end page//
         return window.location.assign("./end.html");
     }
@@ -122,6 +126,14 @@ function getNewQuestion() {
 function incrementScore(num) {
     score += num;
     scoreText.innerText = score;
+}
+
+
+var countDown = function() {
+   var time = 30;
+   setInterval( function () {
+    time--
+   },1000)
 }
 
 
