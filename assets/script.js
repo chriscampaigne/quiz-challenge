@@ -132,7 +132,11 @@ function incrementScore(num) {
 var countDown = function() {
    var time = 30;
    setInterval( function () {
-    time--
+    time--;
+    if(time >= 0){
+        id = document.getElementById("time");
+        id.innerHTML = time;
+    }
    },1000)
 }
 
